@@ -12,7 +12,7 @@
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--border-gold);
 }
@@ -58,30 +58,30 @@
 
 .product-badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 8px;
+  left: 8px;
   z-index: 2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .quick-specs-pill {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background-color: rgba(44, 38, 35, 0.75);
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(44, 38, 35, 0.78);
   backdrop-filter: blur(4px);
   color: #FFFFFF;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 /* Product Info */
 .product-info {
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -91,32 +91,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
+  gap: 0.4rem;
 }
 
 .product-category-tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--primary-terracotta);
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .product-code-tag {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-family: monospace;
   color: var(--text-muted);
   background-color: var(--bg-warm-beige);
-  padding: 0.15rem 0.45rem;
+  padding: 0.1rem 0.4rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-light);
+  white-space: nowrap;
 }
 
 .product-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  line-height: 1.25;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
 }
 
 .product-title a:hover {
@@ -124,39 +127,39 @@
 }
 
 .product-desc-short {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .product-price-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
-  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-top: 0.4rem;
   border-top: 1px dashed var(--border-light);
 }
 
 .price-box {
   display: flex;
   align-items: baseline;
-  gap: 0.2rem;
+  gap: 0.15rem;
 }
 
 .price-currency {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--primary-dark);
 }
 
 .price-amount {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--primary-dark);
   font-family: var(--font-heading);
@@ -164,13 +167,13 @@
 }
 
 .price-tax-tag {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-light);
-  margin-left: 0.3rem;
+  margin-left: 0.2rem;
 }
 
 .stock-status {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: #278A4B;
   font-weight: 500;
 }
@@ -178,10 +181,66 @@
 .product-card-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin-top: auto;
 }
 
 .view-details-btn {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+}
+
+/* User Request: 2-up per line on mobile optimizations */
+@media (max-width: 640px) {
+  .product-info {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .product-title {
+    font-size: 1.02rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .product-desc-short {
+    font-size: 0.76rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+    -webkit-line-clamp: 2;
+  }
+
+  .price-amount {
+    font-size: 1.25rem;
+  }
+
+  .price-currency {
+    font-size: 0.9rem;
+  }
+
+  .price-tax-tag {
+    display: none;
+  }
+
+  .stock-status {
+    font-size: 0.65rem;
+  }
+
+  .product-card-actions {
+    gap: 0.4rem;
+  }
+
+  .product-card-actions .btn {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .product-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    top: 6px;
+    left: 6px;
+  }
+
+  .quick-specs-pill {
+    display: none; /* keep mobile product card clean & focused */
+  }
 }

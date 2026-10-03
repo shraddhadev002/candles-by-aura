@@ -39,7 +39,7 @@ export const HomePage = () => {
         path="/"
       />
 
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="hero-section">
         <div className="container hero-container">
           <div className="hero-text-content">
@@ -102,10 +102,36 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* 4-Step Order Process Explanation */}
+      {/* 2. Bestsellers Section (USER REQUEST: Moved to Top right after Hero) */}
+      <section className="bestsellers-section section-padding">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Customer Favorites</span>
+            <h2 className="section-title">Made With Love. Loved By You.</h2>
+            <p className="section-description">
+              Hand-poured creations that brought warmth and smiles to hundreds of homes.
+            </p>
+          </div>
+
+          <div className="products-grid">
+            {bestsellers.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+
+          <div className="view-all-box">
+            <Link to="/shop" className="btn btn-outline btn-lg">
+              <span>View All Products ({PRODUCTS.length})</span>
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. 4-Step Order Process Explanation */}
       <OrderProcess />
 
-      {/* Featured Categories */}
+      {/* 4. Featured Categories */}
       <section className="categories-section section-padding">
         <div className="container">
           <div className="section-header">
@@ -135,33 +161,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Bestsellers Section */}
-      <section className="bestsellers-section section-padding">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Customer Favorites</span>
-            <h2 className="section-title">Made With Love. Loved By You.</h2>
-            <p className="section-description">
-              Hand-poured creations that brought warmth and smiles to hundreds of homes.
-            </p>
-          </div>
-
-          <div className="products-grid">
-            {bestsellers.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-
-          <div className="view-all-box">
-            <Link to="/shop" className="btn btn-outline btn-lg">
-              <span>View All Products ({PRODUCTS.length})</span>
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Story & Origin Section */}
+      {/* 5. Brand Story & Origin Section */}
       <section className="brand-story-section section-padding">
         <div className="container story-container">
           <div className="story-image-wrap">
@@ -223,7 +223,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Instagram Journey Section */}
+      {/* 6. Instagram Journey Section */}
       <section className="instagram-section section-padding">
         <div className="container">
           <div className="section-header">

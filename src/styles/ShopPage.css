@@ -7,16 +7,16 @@
 .shop-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.5rem;
 }
 
 .shop-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 0.5rem;
 }
 
 .shop-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
 }
 
@@ -25,15 +25,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
 .shop-search-box {
   position: relative;
   flex: 1;
-  min-width: 280px;
+  min-width: 260px;
   display: flex;
   align-items: center;
 }
@@ -46,11 +46,11 @@
 
 .shop-search-box input {
   width: 100%;
-  padding: 0.85rem 2.75rem 0.85rem 2.8rem;
+  padding: 0.75rem 2.5rem 0.75rem 2.6rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-light);
   background-color: var(--bg-card);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   box-shadow: var(--shadow-sm);
   outline: none;
 }
@@ -70,9 +70,9 @@
 .shop-sort-box {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background-color: var(--bg-card);
-  padding: 0.6rem 1.25rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
@@ -83,7 +83,7 @@
 }
 
 .shop-sort-box label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -92,7 +92,7 @@
   border: none;
   background: transparent;
   outline: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--primary-dark);
   cursor: pointer;
@@ -102,23 +102,23 @@
 .category-pills {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   overflow-x: auto;
-  padding-bottom: 0.75rem;
-  margin-bottom: 2rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.75rem;
   scrollbar-width: thin;
 }
 
 .category-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
   border-radius: var(--radius-full);
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   color: var(--text-main);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
   transition: all var(--transition-fast);
@@ -140,10 +140,10 @@
 .active-filter-bar {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
-  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
@@ -151,17 +151,16 @@
   background-color: var(--accent-gold-light);
   color: var(--primary-dark);
   border: 1px solid var(--border-gold);
-  padding: 0.3rem 0.75rem;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   font-weight: 500;
 }
 
 .filter-tag svg {
   cursor: pointer;
-  border-radius: 50%;
 }
 
 .reset-all-btn {
@@ -173,26 +172,43 @@
 /* No Products State */
 .no-products-view {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 3.5rem 1rem;
   background-color: var(--bg-card);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
-  max-width: 500px;
+  max-width: 480px;
   margin: 2rem auto;
 }
 
 .no-products-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.85rem;
 }
 
 .no-products-view h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
 }
 
 .no-products-view p {
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* User Request: 2 candles per line on mobile */
+@media (max-width: 640px) {
+  .shop-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .shop-search-box {
+    min-width: 100%;
+  }
+
+  .shop-sort-box {
+    justify-content: space-between;
+  }
 }
