@@ -1,0 +1,87 @@
+/* Diwali Collection Page Styles */
+.diwali-page {
+  background-color: var(--bg-cream);
+}
+
+.diwali-hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #3D2319 100%);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--accent-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.diwali-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.diwali-hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.festive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(212, 175, 55, 0.2);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.diwali-hero-title {
+  color: #FFFFFF;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.diwali-hero-desc {
+  color: var(--bg-warm-beige);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.diwali-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.highlight-pill {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.mt-5 {
+  margin-top: 2rem;
+}
